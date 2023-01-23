@@ -1,3 +1,5 @@
+// Taken verbatim from https://clerk.dev/docs/nextjs/configure-middleware
+// "Middleware.ts Page Protection Example"
 import { withClerkMiddleware, getAuth } from '@clerk/nextjs/server'
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
