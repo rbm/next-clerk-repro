@@ -4,7 +4,14 @@ import { GetServerSidePropsContext } from "next";
 
 export default function SignInPage(props: { redirectUrl: string }) {
   console.log(`redirectUrl=${props.redirectUrl}`);
-  return <SignIn redirectUrl={props.redirectUrl} />;
+  return (
+    <SignIn
+      path="/sign-in"
+      routing="path"
+      signUpUrl="/sign-up"
+      redirectUrl={props.redirectUrl}
+    />
+  );
 }
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
